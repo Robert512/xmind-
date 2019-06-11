@@ -1,0 +1,26 @@
+core-site.xml
+<property>
+	<name>fs.defaultFS</name>
+	<value>hdfs://localhost:8082</value>
+<property>
+<property>
+	<name>hadoop.tmp.dir</name>
+	<value>/home/jeyy/hadoop/app/tmp</value>
+<property>
+
+
+
+hdfs-site.xml
+<property>
+	<name>dfs.replication</name>
+	<value>1</value>
+<property>
+
+slaves
+
+
+5) 启动hsfs
+	格式化文件系统(仅搭建环境的时候)：hdfs namenode -format
+	启动hdfs：sbin/start-dfs.sh
+	验证启动成功：jps
+

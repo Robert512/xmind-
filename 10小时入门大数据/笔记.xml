@@ -1,0 +1,49 @@
+core-site.xml
+<property>
+	<name>fs.defaultFS</name>
+	<value>hdfs://localhost:8082</value>
+</property>
+<property>
+	<name>hadoop.tmp.dir</name>
+	<value>/home/jerrylee/app/tmp</value>
+</property>
+
+
+
+hdfs-site.xml
+<property>
+	<name>dfs.replication</name>
+	<value>1</value>
+</property>
+
+slaves
+
+
+root/Root123!
+jerrylee/103617
+
+centos 与 win共享：
+https://www.cnblogs.com/caoRM/p/8696277.html
+/usr/bin/vmhgfs-fuse .host:/ /mnt -o subtype=vmhgfs-fuse,allow_other
+
+
+
+5) 启动hsfs
+	格式化文件系统(仅搭建环境的时候)：hdfs namenode -format
+	启动hdfs：sbin/start-dfs.sh
+	验证启动成功：jps
+		http:localhost:50070
+
+6）shell
+	hadoop fs = hdfs dfs
+
+7）hdfs 命令 put上去，副本系数=配合项
+	Java API 创建的，
+
+8）HDFS读写流程
+
+
+
+
+YARN
+1、
